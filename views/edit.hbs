@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Update form</title>
+</head>
+<body>
+      <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+             <h1>Add Post</h1>
+                <form action="/update" method="POST" class="form-group mt-4">
+                <input type="hidden" name="id" value="{{data._id}}">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" class="form-control" value="{{data.title}}">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="100" rows="10" >{{data.description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <input type="file" name="pic" >
+                </div>
+                <div class="form-group">
+                 <button class="btn btn-primary mt-2">Update Post</button>
+                </div>
+                </form>
+            </div>
+          </div>
+      </div>
+            
+</body>
+</html>

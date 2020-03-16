@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>login-form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <style>
+        span {
+            color: #218838;
+        }
+    </style>
+</head>
+​
+<body>
+    <div class="container">
+        <header>
+            <h1>news<span>Crunch</span></h1>
+            <p>receive and reflect truth</p>
+            <hr />
+            hello{{data.name}}
+        </header>
+        <div class="row mt-4">
+            <div class="col-md-4 ">
+​
+                <div>
+                    <a href="/home">Home</a>
+                </div>
+                <div>
+                    <a href="/dashboard">Admin</a>
+                </div>
+                <div>
+                    <a href="/create">Create</a>
+                </div>
+                <div>
+                    <a href="/view">View</a>
+                </div>
+                <div>
+                    <a href="/logout">LogOut</a>
+                </div>
+            </div>
+            <div class="col-md-8 ">
+                {{#each posts}}
+                <div>
+                    <a href="edit/{{_id}}">{{title}}</a>
+                </div>
+                <div>
+                    {{description}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+</body>
+​
+</html>
